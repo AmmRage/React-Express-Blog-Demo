@@ -40,32 +40,6 @@
 - 文章评论 
 
 
-## 项目运行效果
-- 首页
-![index](./record/2017-09-28%2010_25_45.gif)
-
-- 非管理员登录
-
-![nealyanglogined](./record/nealyangLogined.gif)
-
-- 管理员登录
-
-![adminLogined](./record/adminLogined.gif)
-
-- 标签管理
-
-![amdinTag](./record/adminTag.gif)
-
-- 查看文章详情
-![detail](./record/checkArticleDetail.gif)
-
-- 发表文章
-![newArticle](./record/new_article.gif)
-
-- 修改文章
-![modifiedArticle](./record/modifiedArticle.gif)
-
-
 
 ## 项目介绍
 当然这是一个全栈的开源demo，在此之前写过一个[模仿大众点评的Demo](https://github.com/Nealyang/React-Fullstack-Dianping-Demo),有兄弟反应说应该加点注释。
@@ -117,24 +91,17 @@ db @3.4.0
 
 ## 生产环境启动
     
-    npm run start-prod
-
+    npm run start-prod 
     
-    
-## 开发数据库
+## by Ammrage
 
-> 链接: https://pan.baidu.com/s/1c3aedw8 密码: 5ii1
+**For Windows:**
 
+**step1**: npm run start-dev-api
 
+**step2**: npm start
 
-欢迎兄弟们加入：
-
-Node.js技术交流一群：209530601 （满）
-Node.js技术交流二群：群号:698239345
-
-React技术栈：398240621
-
-前端技术杂谈：604953717 (新建)
+**cause**: it seems caused by the console I/O blocking. pending to confirm coz it's late n I'm sleepy. 
 
 ---
 
