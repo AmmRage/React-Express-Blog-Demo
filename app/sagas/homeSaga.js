@@ -13,6 +13,20 @@ export function* login(username, password) {
     }
 }
 
+export function* logout() {
+    yield put({type: IndexActionTypes.USER_LOGOUT});
+    try {
+        return yield call(get, '/user/logout')
+    } catch (error) {
+        yield put({type:IndexActionTypes.SET_MESSAGE,msgContent:'注销过程中出错~',msgType:0});
+    } finally {
+        // yield put({type:IndexActionTypes.SET_MESSAGE,msgContent:'你被注销了', msgType:1});
+        yield put({type:IndexActionTypes.RESPONSE_USER_INFO, data: {
+            userId: null
+        }})
+}
+}
+
 export function* register (data) {
     yield put({type:IndexActionTypes.FETCH_START});
     try {
@@ -36,15 +50,14 @@ export function* loginFlow() {
 }
 
 export function* registerFlow () {
-    while(true){
-        let request = yield take(IndexActionTypes.USER_REGISTER);
-        let response = yield call(register, request.data);
-        if(response&&response.code === 0){
-            yield put({type:IndexActionTypes.SET_MESSAGE,msgContent:'注册成功!',msgType:1});
-            yield put({type:IndexActionTypes.RESPONSE_USER_INFO,data:response.data})
-        }
-
-    }
+    // while(true){
+    //     let request = yield take(IndexActionTypes.USER_REGISTER);
+    //     let response = yield call(register, request.data);
+    //     if(response&&response.code === 0){
+    //         yield put({type:IndexActionTypes.SET_MESSAGE,msgContent:'注册成功!',msgType:1});
+    //         yield put({type:IndexActionTypes.RESPONSE_USER_INFO,data:response.data})
+    //     }
+    // }
 }
 
 export function* user_auth () {

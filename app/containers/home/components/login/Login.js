@@ -20,9 +20,9 @@ export default class Login extends Component {
                 <TabPane tab="登录" key="1">
                     <LoginForm login={login}/>
                 </TabPane>
-                <TabPane tab="注册" key="2">
+                {/* <TabPane tab="注册" key="2">
                     <RegisterForm register={register}/>
-                </TabPane>
+                </TabPane> */}
             </Tabs>
         )
     }

@@ -1,10 +1,12 @@
 .contentContainer{
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     padding-top: 20px;
 }
 .loginContainer{
+    /* min-width: 200px; */
+    width: 20%;
     flex:1;
     margin-left: 10px;
 }
@@ -15,5 +17,5 @@
     background: #eee;
 }
 .content{
-    width: 570px;
+    width: 80%;
 }

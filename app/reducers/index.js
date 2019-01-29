@@ -14,6 +14,7 @@ export const actionsTypes = {
     FETCH_START: "FETCH_START",
     FETCH_END: "FETCH_END",
     USER_LOGIN: "USER_LOGIN",
+    USER_LOGOUT: "USER_LOGOUT",
     USER_REGISTER: "USER_REGISTER",
     RESPONSE_USER_INFO: "RESPONSE_USER_INFO",
     SET_MESSAGE: "SET_MESSAGE",
@@ -26,6 +27,11 @@ export const actions = {
             type: actionsTypes.USER_LOGIN,
             username,
             password
+        }
+    },
+    get_logout: function () {
+        return {
+            type: actionsTypes.USER_LOGOUT
         }
     },
     get_register: function (data) {
